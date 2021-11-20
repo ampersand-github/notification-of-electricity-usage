@@ -15,6 +15,6 @@ export class CustomerNumber extends AggregateRoot<ICustomerNumberDomain, Custome
     return this.props.meterDate;
   }
   public get meterPlace(): ICustomerNumberDomain['meterPlace'] {
-    return this.props.meterDate;
+    return this.props.meterPlace;
   }
 }
