@@ -17,4 +17,23 @@ export class Customer extends AggregateRoot<ICustomerDomain, CustomerId> {
   public get address(): ICustomerDomain['address'] {
     return this.props.address;
   }
+
+
+
+  public get customerNumberId(): ICustomerDomain['customerNumberId'] {
+    return this.props.customerNumberId;
+  }
+  public get historyId(): ICustomerDomain['historyId'] {
+    return this.props.historyId;
+  }
+  public get supplyPointSpecificNumberId(): ICustomerDomain['supplyPointSpecificNumberId'] {
+    return this.props.supplyPointSpecificNumberId;
+  }
+  public get contractDetailsId(): ICustomerDomain['contractDetailsId'] {
+    return this.props.contractDetailsId;
+
+  }  public get instrumentId(): ICustomerDomain['instrumentId'] {
+    return this.props.instrumentId;
+  }
+
 }

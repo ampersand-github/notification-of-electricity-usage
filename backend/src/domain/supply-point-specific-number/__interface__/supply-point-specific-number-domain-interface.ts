@@ -1,4 +1,7 @@
+import { AreaId } from "src/domain/area/area-id";
+
 export interface ISupplyPointSpecificNumberDomain {
   address: string
-  // todo その他の項目
+  areaId:AreaId
+  othersNumber:number
 }

@@ -1,4 +1,9 @@
 export interface IHistoryDomain {
   year:number
-      // todo 足りない項目をあとでつくる
+  month:number
+  price:number
+  meter:number
+  readingDate:Date
+  start:Date
+  end:Date
 }
