@@ -1,6 +1,6 @@
-import { MeterReaderId } from "../instrument-id";
+import { MeterReaderId } from "../meter-reader-id";
 
-describe('InstrumentId', () => {
+describe('MeterReaderId', () => {
   it('createできる', () => {
     expect(MeterReaderId.create()).toEqual(expect.any(MeterReaderId));
   });
