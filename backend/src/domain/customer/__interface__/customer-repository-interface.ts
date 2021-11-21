@@ -2,9 +2,11 @@ import { CustomerId } from '../customer-id'
 import { Customer } from '../customer'
 
 export interface ICustomerRepository {
-  findById(userId: CustomerId): Promise<Customer | null>;
+  findById(customerId: CustomerId): Promise<Customer | null>;
+  /*
   findAll(): Promise<Customer[]>;
-  register(user: Customer): Promise<void>;
-  update(user: Customer): Promise<void>;
-  delete(user: Customer): Promise<void>;
+  create(customer: Customer): Promise<void>;
+  update(customer: Customer): Promise<void>;
+  delete(customer: Customer): Promise<void>;
+ */
 }
