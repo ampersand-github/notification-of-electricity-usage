@@ -1,5 +1,5 @@
-import { MeterReader } from "../meter-reader";
-import { MeterReaderId } from "../meter-reader-id";
+import { MeterReader } from '../meter-reader'
+import { MeterReaderId } from '../meter-reader-id'
 
 export interface IMeterReaderRepository {
   findById(meterReaderId: MeterReaderId): Promise<MeterReader | null>;

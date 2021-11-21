@@ -1,6 +1,5 @@
-import { Instrument } from "../instrument";
-import { InstrumentId } from "../instrument-id";
-
+import { Instrument } from '../instrument'
+import { InstrumentId } from '../instrument-id'
 
 export interface IInstrumentRepository {
   findById(instrumentId: InstrumentId): Promise<Instrument | null>;

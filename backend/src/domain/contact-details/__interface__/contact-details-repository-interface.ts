@@ -1,5 +1,5 @@
-import { ContactDetails } from "../contact-details";
-import { ContactDetailsId } from "../contact-details-id";
+import { ContactDetails } from '../contact-details'
+import { ContactDetailsId } from '../contact-details-id'
 
 export interface IContactDetailsRepository {
   findById(contactDetailsId: ContactDetailsId): Promise<ContactDetails | null>;

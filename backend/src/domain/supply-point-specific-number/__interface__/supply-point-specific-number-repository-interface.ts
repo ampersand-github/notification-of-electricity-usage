@@ -1,5 +1,5 @@
-import { SupplyPointSpecificNumber } from "../supply-point-specific-number";
-import { SupplyPointSpecificNumberId } from "../supply-point-specific-number-id";
+import { SupplyPointSpecificNumber } from '../supply-point-specific-number'
+import { SupplyPointSpecificNumberId } from '../supply-point-specific-number-id'
 
 export interface ISupplyPointSpecificNumberRepository {
   findById(meterReaderId: SupplyPointSpecificNumberId): Promise<SupplyPointSpecificNumber | null>;

@@ -1,5 +1,5 @@
-import { Area } from "../area";
-import { AreaId } from "../area-id";
+import { Area } from '../area'
+import { AreaId } from '../area-id'
 
 export interface IAreaRepository {
   findById(areaId: AreaId): Promise<Area | null>;
