@@ -1,9 +1,9 @@
-import { IHistoryDomain } from '../__interface__/history-domain-interface'
-import { History } from '../history'
-import { HistoryId } from '../history-id'
+import {IMonthHistoryDomain} from "../__interface__/month-history-domain-interface";
+import {MonthHistory} from "../month-month-history";
+import { MonthHistoryId } from "../month-history-id";
 
-describe('History', () => {
-  const historyProps: IHistoryDomain = {
+describe('MonthHistory', () => {
+  const historyProps: IMonthHistoryDomain = {
     year: 2021,
     month: 12,
     price: 1000,
@@ -14,15 +14,15 @@ describe('History', () => {
   }
 
   it('createできる', () => {
-    expect(History.create(historyProps)).toEqual(expect.any(History))
+    expect(MonthHistory.create(historyProps)).toEqual(expect.any(MonthHistory))
   })
 
   it('restoreできる', () => {
-    const historyId: HistoryId = HistoryId.restore('test-id')
-    expect(History.restore(historyProps, historyId)).toEqual(
-      expect.any(History)
+    const historyId: MonthHistoryId = MonthHistoryId.restore('test-id')
+    expect(MonthHistory.restore(historyProps, historyId)).toEqual(
+      expect.any(MonthHistory)
     )
-    expect(History.restore(historyProps, historyId).id.equals(historyId)).toBe(
+    expect(MonthHistory.restore(historyProps, historyId).id.equals(historyId)).toBe(
       true
     )
   })
@@ -31,12 +31,12 @@ describe('History', () => {
     describe('validateOfYear', () => {
       it('4桁は正常', () => {
         const data = { ...historyProps, year: 2021 }
-        expect(History.create(data)).toEqual(expect.any(History))
+        expect(MonthHistory.create(data)).toEqual(expect.any(MonthHistory))
       })
       it('5桁はエラー', () => {
         const data = { ...historyProps, year: 20201 }
         expect(() => {
-          History.create(data)
+          MonthHistory.create(data)
         }).toThrowError()
       })
     })
@@ -47,7 +47,7 @@ describe('History', () => {
           month: 1,
           readingDate: new Date('2021-01-20T09:00:00')
         }
-        expect(History.create(data)).toEqual(expect.any(History))
+        expect(MonthHistory.create(data)).toEqual(expect.any(MonthHistory))
       })
 
       it('1-12月は正常', () => {
@@ -56,7 +56,7 @@ describe('History', () => {
           month: 12,
           readingDate: new Date('2021-12-20T09:00:00')
         }
-        expect(History.create(data)).toEqual(expect.any(History))
+        expect(MonthHistory.create(data)).toEqual(expect.any(MonthHistory))
       })
       it('0月はエラー', () => {
         const data = {
@@ -65,7 +65,7 @@ describe('History', () => {
           readingDate: new Date('2021-00-20T09:00:00')
         }
         expect(() => {
-          History.create(data)
+          MonthHistory.create(data)
         }).toThrowError()
       })
       it('13月はエラー', () => {
@@ -76,7 +76,7 @@ describe('History', () => {
         }
 
         expect(() => {
-          History.create(data)
+          MonthHistory.create(data)
         }).toThrowError()
       })
     })
