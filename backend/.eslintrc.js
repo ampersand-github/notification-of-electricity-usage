@@ -2,14 +2,17 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    'jest/globals': true
+    "jest/globals": true,
   },
-  extends: ['standard'],
-  parser: '@typescript-eslint/parser',
+  extends: ["standard"],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: "module",
   },
-  plugins: ['@typescript-eslint', 'jest'],
-  rules: { 'no-useless-constructor': 'off' }
-}
+  plugins: ["@typescript-eslint", "jest"],
+  rules: {
+    "no-useless-constructor": "off",
+    "no-loss-of-precision": "off",
+  },
+};
