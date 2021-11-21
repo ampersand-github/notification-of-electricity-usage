@@ -1,4 +1,4 @@
-import { AreaId } from "src/domain/area/area-id";
+import { AreaId } from 'src/domain/area/area-id'
 
 export interface ISupplyPointSpecificNumberDomain {
   address: string

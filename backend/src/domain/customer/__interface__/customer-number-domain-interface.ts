@@ -1,5 +1,5 @@
 export interface ICustomerNumberDomain {
   meterDate:number
-  meterPlace:string
+  meterPlace:number
   othersNumber:number
 }
