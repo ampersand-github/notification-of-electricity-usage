@@ -8,6 +8,7 @@ export class MonthHistoryOutputDto {
   public readonly readingDate: Date;
   public readonly start: Date;
   public readonly end: Date;
+  public readonly meterReaderId: string;
   public constructor (history: MonthHistory) {
     this.year = history.year
     this.month = history.month
@@ -16,5 +17,6 @@ export class MonthHistoryOutputDto {
     this.readingDate = history.readingDate
     this.start = history.start
     this.end = history.end
+    this.meterReaderId = history.meterReaderId.toString()
   }
 }

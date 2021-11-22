@@ -5,7 +5,7 @@ export class CustomerOutputDto {
   public readonly address: string;
   public readonly meterDate: number;
   public readonly meterPlace: number;
-  public readonly othersNumber: number;
+  public readonly fullCustomerNumber: string;
   public readonly monthHistoryId: string;
   public readonly supplyPointSpecificNumberId: string;
   public readonly contractDetailsId: string;
@@ -13,9 +13,9 @@ export class CustomerOutputDto {
   public constructor (customer: Customer) {
     this.name = customer.name
     this.address = customer.address
-    this.meterDate = customer.customerNumber.meterDate
-    this.meterPlace = customer.customerNumber.meterPlace
-    this.othersNumber = customer.customerNumber.othersNumber
+    this.meterDate = customer.meterDate
+    this.meterPlace = customer.meterPlace
+    this.fullCustomerNumber = customer.fullCustomerNumber
     this.monthHistoryId = customer.monthHistoryId.toString()
     this.supplyPointSpecificNumberId =
       customer.supplyPointSpecificNumberId.toString()
