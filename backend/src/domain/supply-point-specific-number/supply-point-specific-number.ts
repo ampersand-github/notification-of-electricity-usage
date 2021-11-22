@@ -31,7 +31,7 @@ export class SupplyPointSpecificNumber extends AggregateRoot<
     return this.props.areaId
   }
 
-  public get othersNumber (): OthersNumber["othersNumber"] {
+  public get othersNumber (): OthersNumber['othersNumber'] {
     return this.props.othersNumber.othersNumber
   }
 }
