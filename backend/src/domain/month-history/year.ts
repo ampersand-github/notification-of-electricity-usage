@@ -6,7 +6,7 @@ export interface YearProps {
 
 export class Year extends ValueObject<YearProps> {
     public static create(props: YearProps): Year {
-      Year.validateOfYear(props)
+      Year.validate(props)
     return new Year(props);
   }
 
@@ -14,7 +14,7 @@ export class Year extends ValueObject<YearProps> {
     return this.props.year;
   }
 
-  private static validateOfYear (props) {
+  private static validate(props) {
     if (String(props.year).length !== 4) {
       throw new Error('年は4桁で指定してください')
     }

@@ -6,7 +6,7 @@ export interface MonthProps {
 
 export class Month extends ValueObject<MonthProps> {
   public static create(props: MonthProps): Month {
-    Month.validateOfMonth(props);
+    Month.validate(props);
     return new Month(props);
   }
 
@@ -14,7 +14,7 @@ export class Month extends ValueObject<MonthProps> {
     return this.props.month;
   }
 
-  private static validateOfMonth(props: MonthProps) {
+  private static validate(props: MonthProps) {
     if (!(props.month >= 1 && props.month <= 12)) {
       throw new Error("月は1~12で指定してください");
     }
