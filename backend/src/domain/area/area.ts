@@ -13,7 +13,6 @@ export class Area extends AggregateRoot<IAreaDomain, AreaId> {
     return new Area(props, id)
   }
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   public get code (): IAreaDomain['code'] {
     return this.props.code
   }
@@ -22,7 +21,7 @@ export class Area extends AggregateRoot<IAreaDomain, AreaId> {
     return this.props.name
   }
 
-  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  // todo 値オブジェクトに委譲したい
   private static validateOfCode (props: IAreaDomain['code']) {
     if (String(props).length > 2) {
       throw new Error('電力会社コードは2桁の値で指定してください')
