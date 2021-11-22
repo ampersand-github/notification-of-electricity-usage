@@ -1,5 +1,5 @@
 import { MonthHistoryId } from '../month-history-id'
-import { MonthHistory } from '../month-month-history'
+import { MonthHistory } from '../month-history'
 
 export interface IMonthHistoryRepository {
   // todo idとyearとmonthから1つ指定できるようにする

@@ -8,7 +8,7 @@ describe('SupplyPointSpecificNumber', () => {
   const supplyPointSpecificNumberProps: ISupplyPointSpecificNumberDomain = {
     address: '住所',
     areaId: AreaId.create(),
-    othersNumber: OthersNumber.create({othersNumber: 1234567891234567})
+    othersNumber: OthersNumber.create({ othersNumber: 1234567891234567 })
   }
   it('createできる', () => {
     expect(SupplyPointSpecificNumber.create(supplyPointSpecificNumberProps)).toEqual(expect.any(SupplyPointSpecificNumber))
