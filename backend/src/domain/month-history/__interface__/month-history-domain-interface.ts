@@ -1,7 +1,7 @@
 import { CustomerId } from 'src/domain/customer/customer-id'
-import { Month } from '../month';
-import { Year } from '../year';
-import {ReadingDate} from "../reading-date";
+import { Month } from '../month'
+import { Year } from '../year'
+import { ReadingDate } from '../reading-date'
 
 export interface IMonthHistoryDomain {
   customerId:CustomerId
