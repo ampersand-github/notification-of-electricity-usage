@@ -1,6 +1,6 @@
-import {IMonthHistoryDomain} from "../__interface__/month-history-domain-interface";
-import {MonthHistory} from "../month-month-history";
-import { MonthHistoryId } from "../month-history-id";
+import { IMonthHistoryDomain } from '../__interface__/month-history-domain-interface'
+import { MonthHistory } from '../month-month-history'
+import { MonthHistoryId } from '../month-history-id'
 
 describe('MonthHistory', () => {
   const historyProps: IMonthHistoryDomain = {

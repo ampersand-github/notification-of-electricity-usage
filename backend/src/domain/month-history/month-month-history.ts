@@ -1,6 +1,6 @@
-import { AggregateRoot } from "../__shared__/aggregate-root"
-import { MonthHistoryId } from "./month-history-id"
-import {IMonthHistoryDomain} from "./__interface__/month-history-domain-interface";
+import { AggregateRoot } from '../__shared__/aggregate-root'
+import { MonthHistoryId } from './month-history-id'
+import { IMonthHistoryDomain } from './__interface__/month-history-domain-interface'
 
 export class MonthHistory extends AggregateRoot<IMonthHistoryDomain, MonthHistoryId> {
   public static create (props: IMonthHistoryDomain): MonthHistory {
@@ -14,6 +14,10 @@ export class MonthHistory extends AggregateRoot<IMonthHistoryDomain, MonthHistor
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  public get customerId (): IMonthHistoryDomain['customerId'] {
+    return this.props.customerId
+  }
+
   public get year (): IMonthHistoryDomain['year'] {
     return this.props.year
   }

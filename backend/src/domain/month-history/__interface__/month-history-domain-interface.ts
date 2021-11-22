@@ -1,4 +1,7 @@
+import { CustomerId } from 'src/domain/customer/customer-id'
+
 export interface IMonthHistoryDomain {
+  customerId:CustomerId
   year:number
   month:number
   price:number
