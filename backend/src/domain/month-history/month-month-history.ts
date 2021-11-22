@@ -1,5 +1,6 @@
 import { AggregateRoot } from '../__shared__/aggregate-root'
 import { MonthHistoryId } from './month-history-id'
+import { Year } from './year'
 import { IMonthHistoryDomain } from './__interface__/month-history-domain-interface'
 
 export class MonthHistory extends AggregateRoot<IMonthHistoryDomain, MonthHistoryId> {
@@ -18,8 +19,8 @@ export class MonthHistory extends AggregateRoot<IMonthHistoryDomain, MonthHistor
     return this.props.customerId
   }
 
-  public get year (): IMonthHistoryDomain['year'] {
-    return this.props.year
+  public get year (): Year['year']  {
+    return this.props.year.year
   }
 
   public get month (): IMonthHistoryDomain['month'] {
@@ -48,18 +49,11 @@ export class MonthHistory extends AggregateRoot<IMonthHistoryDomain, MonthHistor
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   private static validate (props: IMonthHistoryDomain) {
-    MonthHistory.validateOfYear(props.year)
     MonthHistory.validateOfMonth(props.month)
     MonthHistory.validateOfReadingDate(props)
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  private static validateOfYear (props: IMonthHistoryDomain['year']) {
-    if (String(props).length !== 4) {
-      throw new Error('年は4桁で指定してください')
-    }
-  }
-
   private static validateOfMonth (props: IMonthHistoryDomain['month']) {
     if (!(props >= 1 && props <= 12)) {
       throw new Error('月は1~12で指定してください')
@@ -68,9 +62,12 @@ export class MonthHistory extends AggregateRoot<IMonthHistoryDomain, MonthHistor
 
   private static validateOfReadingDate (props: IMonthHistoryDomain) {
     const month = props.readingDate.getMonth() + 1 // 月は0から始まるので+1にする
+    // todo あとで
+/*
     if (props.year !== props.readingDate.getFullYear()) {
       throw new Error('検針日と年が異なります')
     }
+ */
 
     if (props.month !== month) {
       throw new Error('検針日と月が異なります')

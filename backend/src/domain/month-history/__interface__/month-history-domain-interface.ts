@@ -1,8 +1,9 @@
 import { CustomerId } from 'src/domain/customer/customer-id'
+import { Year } from '../year';
 
 export interface IMonthHistoryDomain {
   customerId:CustomerId
-  year:number
+  year:Year
   month:number
   price:number
   meter:number
