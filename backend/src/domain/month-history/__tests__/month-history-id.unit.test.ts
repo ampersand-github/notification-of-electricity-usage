@@ -1,4 +1,4 @@
-import { MonthHistoryId } from "../month-history-id"
+import { MonthHistoryId } from '../month-history-id'
 
 describe('MonthHistoryId', () => {
   it('createできる', () => {
@@ -15,10 +15,10 @@ describe('MonthHistoryId', () => {
 
   it('equalsできる', () => {
     expect(
-        MonthHistoryId.restore('test-id').equals(MonthHistoryId.restore('test-id'))
+      MonthHistoryId.restore('test-id').equals(MonthHistoryId.restore('test-id'))
     ).toBe(true)
     expect(
-        MonthHistoryId.restore('test-id').equals(MonthHistoryId.restore('not-equal-id'))
+      MonthHistoryId.restore('test-id').equals(MonthHistoryId.restore('not-equal-id'))
     ).toBe(false)
   })
 })
