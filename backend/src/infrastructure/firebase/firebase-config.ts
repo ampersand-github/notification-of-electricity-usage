@@ -1,3 +1,4 @@
+/*
 export const firebaseConfig = {
   type: firebaseAdminJson.type,
   projectId: firebaseAdminJson.project_id,
@@ -9,3 +10,17 @@ export const firebaseConfig = {
   authProviderX509CertUrl: firebaseAdminJson.auth_provider_x509_cert_url,
   clientC509CertUrl: firebaseAdminJson.client_x509_cert_url
 }
+
+ */
+export const firebaseConfig = {
+  type: "",
+  projectId:  "",
+  privateKeyId: "",
+  privateKey:  "",
+  clientEmail: "",
+  authUri:  "",
+  tokenUri:  "",
+  authProviderX509CertUrl:  "",
+  clientC509CertUrl: "",
+}
+
