@@ -3,7 +3,7 @@ import { IContactDetailsRepository } from 'src/domain/contact-details/__interfac
 import { ContactDetailsId } from '../../domain/contact-details/contact-details-id'
 import { ContactDetailsOutputDto } from './__dto__/contact-details-output-dto'
 
-export class FindByIdUsecase {
+export class ContactDetailsFindByIdUsecase {
   public constructor (readonly repository: IContactDetailsRepository) {}
 
   public async do (id: string): Promise<ContactDetailsOutputDto> {

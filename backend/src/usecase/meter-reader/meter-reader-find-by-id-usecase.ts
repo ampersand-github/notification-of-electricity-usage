@@ -3,7 +3,7 @@ import { MeterReaderId } from 'src/domain/meter-reader/meter-reader-id'
 import { IMeterReaderRepository } from 'src/domain/meter-reader/__interface__/meter-reader-repository-interface'
 import { MeterReaderOutputDto } from './__dto__/meter-reader-output-dto'
 
-export class FindByIdUsecase {
+export class MeterReaderFindByIdUsecase {
   public constructor (readonly repository: IMeterReaderRepository) {}
 
   public async do (id: string): Promise<MeterReaderOutputDto> {

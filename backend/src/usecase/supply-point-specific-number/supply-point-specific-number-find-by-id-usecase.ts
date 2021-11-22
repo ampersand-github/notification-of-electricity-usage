@@ -3,7 +3,7 @@ import { SupplyPointSpecificNumber } from '../../domain/supply-point-specific-nu
 import { ISupplyPointSpecificNumberRepository } from 'src/domain/supply-point-specific-number/__interface__/supply-point-specific-number-repository-interface'
 import { SupplyPointSpecificNumberId } from 'src/domain/supply-point-specific-number/supply-point-specific-number-id'
 
-export class FindByIdUsecase {
+export class SupplyPointSpecificNumberFindByIdUsecase {
   public constructor (
     readonly repository: ISupplyPointSpecificNumberRepository
   ) {}
