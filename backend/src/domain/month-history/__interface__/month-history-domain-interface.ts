@@ -1,4 +1,4 @@
-export interface IHistoryDomain {
+export interface IMonthHistoryDomain {
   year:number
   month:number
   price:number
@@ -6,4 +6,5 @@ export interface IHistoryDomain {
   readingDate:Date
   start:Date
   end:Date
+  // todo 検針員忘れている
 }

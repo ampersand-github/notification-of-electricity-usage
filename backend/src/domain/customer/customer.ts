@@ -23,8 +23,8 @@ export class Customer extends AggregateRoot<ICustomerDomain, CustomerId> {
     return this.props.customerNumber
   }
 
-  public get historyId (): ICustomerDomain['historyId'] {
-    return this.props.historyId
+  public get monthHistoryId (): ICustomerDomain['monthHistoryId'] {
+    return this.props.monthHistoryId
   }
 
   public get supplyPointSpecificNumberId (): ICustomerDomain['supplyPointSpecificNumberId'] {

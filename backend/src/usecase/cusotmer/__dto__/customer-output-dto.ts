@@ -1,14 +1,16 @@
+import { Customer } from 'src/domain/customer/customer'
 
-/*
 export class CustomerOutputDto {
-  public readonly id: string;
   public readonly name: string;
-  public readonly email: string;
-  public constructor(user: User) {
-    this.id = user.id.toString();
-    this.name = user.name;
-    this.email = user.email;
+  public readonly address: string;
+  public readonly meterDate: number;
+  public readonly meterPlace: number;
+  public readonly othersNumber: number;
+  public constructor (customer: Customer) {
+    this.name = customer.name
+    this.address = customer.address
+    this.meterDate = customer.customerNumber.meterDate
+    this.meterPlace = customer.customerNumber.meterPlace
+    this.othersNumber = customer.customerNumber.othersNumber
   }
 }
-
- */
