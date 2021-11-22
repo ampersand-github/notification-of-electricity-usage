@@ -3,7 +3,7 @@ import { UniqueEntityId } from '../__shared__/unique-entity-id'
 
 export class MonthHistoryId extends UniqueEntityId {
   private constructor (value: string) {
-    super(value, 'HistoryId')
+    super(value, 'MonthHistoryId')
   }
 
   public static create (): MonthHistoryId {

@@ -3,7 +3,7 @@ import { UniqueEntityId } from '../__shared__/unique-entity-id'
 
 export class SupplyPointSpecificNumberId extends UniqueEntityId {
   private constructor (value: string) {
-    super(value, 'InstrumentId')
+    super(value, 'SupplyPointSpecificNumberId')
   }
 
   public static create (): SupplyPointSpecificNumberId {
