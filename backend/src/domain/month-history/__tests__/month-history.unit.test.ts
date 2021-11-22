@@ -1,9 +1,11 @@
 import { IMonthHistoryDomain } from '../__interface__/month-history-domain-interface'
 import { MonthHistory } from '../month-month-history'
 import { MonthHistoryId } from '../month-history-id'
+import { CustomerId } from 'src/domain/customer/customer-id'
 
 describe('MonthHistory', () => {
   const historyProps: IMonthHistoryDomain = {
+    customerId:CustomerId.create(),
     year: 2021,
     month: 12,
     price: 1000,
