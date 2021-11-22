@@ -1,22 +1,25 @@
-import { Customer } from '../customer'
-import { CustomerId } from '../customer-id'
-import { ICustomerDomain } from '../__interface__/customer-domain-interface'
-import { HistoryId } from '../../month-history/history-id'
-import { SupplyPointSpecificNumberId } from '../../supply-point-specific-number/supply-point-specific-number-id'
-import { ContactDetailsId } from '../../contact-details/contact-details-id'
-import { InstrumentId } from '../../instrument/instrument-id'
-import { CustomerNumber } from '../customer-number'
+import { ContactDetailsId } from "src/domain/contact-details/contact-details-id"
+import { InstrumentId } from "src/domain/instrument/instrument-id"
+import { MonthHistoryId } from "src/domain/month-history/month-history-id"
+import { SupplyPointSpecificNumberId } from "src/domain/supply-point-specific-number/supply-point-specific-number-id"
+import { Customer } from "../customer"
+import { CustomerId } from "../customer-id"
+import { CustomerNumber } from "../customer-number"
+import { ICustomerDomain } from "../__interface__/customer-domain-interface"
+import {MeterDate} from "../meter-date";
+import {MeterPlace} from "../meter-place";
+import {OthersNumber} from "../others-number";
 
 describe('Customer', () => {
   const customerProps: ICustomerDomain = {
     name: '名前',
     address: '東京都・・・',
     customerNumber: CustomerNumber.create({
-      meterDate: 10,
-      meterPlace: 10,
-      othersNumber: 1234567890
+      meterDate: MeterDate.create({ meterDate: 10 }),
+      meterPlace: MeterPlace.create({ meterPlace: 11 }),
+      othersNumber: OthersNumber.create({ othersNumber: 1234567890 }),
     }),
-    historyId: HistoryId.create(),
+    monthHistoryId: MonthHistoryId.create(),
     supplyPointSpecificNumberId: SupplyPointSpecificNumberId.create(),
     contractDetailsId: ContactDetailsId.create(),
     instrumentId: InstrumentId.create()

@@ -1,5 +1,9 @@
+import {MeterDate} from "../meter-date";
+import { MeterPlace } from "../meter-place";
+import { OthersNumber } from "../others-number";
+
 export interface ICustomerNumberDomain {
-  meterDate:number
-  meterPlace:number
-  othersNumber:number
+  meterDate:MeterDate
+  meterPlace:MeterPlace
+  othersNumber:OthersNumber
 }
