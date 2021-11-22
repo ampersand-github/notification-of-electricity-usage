@@ -1,16 +1,15 @@
 import { ValueObject } from '../__shared__/value-object'
+import {ICodeDomain} from "../area/__interface__/code-domain-interface";
+import { IMeterDateDomain } from './__interface__/meter-date-domain-interface';
 
-export interface MeterDateProps {
-  meterDate: number;
-}
 
-export class MeterDate extends ValueObject<MeterDateProps> {
-  public static create (props: MeterDateProps): MeterDate {
+export class MeterDate extends ValueObject<IMeterDateDomain> {
+  public static create (props: IMeterDateDomain): MeterDate {
     MeterDate.validate(props)
     return new MeterDate(props)
   }
 
-  public get meterDate (): MeterDateProps['meterDate'] {
+  public get meterDate (): IMeterDateDomain['meterDate'] {
     return this.props.meterDate
   }
 

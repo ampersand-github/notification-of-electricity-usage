@@ -1,16 +1,13 @@
 import { ValueObject } from '../__shared__/value-object'
+import {IOthersNumberDomain} from "./__interface__/others-number-domain-interface";
 
-export interface OthersNumberProps {
-  othersNumber: number;
-}
-
-export class OthersNumber extends ValueObject<OthersNumberProps> {
-  public static create (props: OthersNumberProps): OthersNumber {
+export class OthersNumber extends ValueObject<IOthersNumberDomain> {
+  public static create (props: IOthersNumberDomain): OthersNumber {
     OthersNumber.validate(props)
     return new OthersNumber(props)
   }
 
-  public get othersNumber (): OthersNumberProps['othersNumber'] {
+  public get othersNumber (): IOthersNumberDomain['othersNumber'] {
     return this.props.othersNumber
   }
 

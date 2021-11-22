@@ -1,22 +1,19 @@
-import { ValueObject } from '../__shared__/value-object'
+import { ValueObject } from "../__shared__/value-object";
+import { IMonthDomain } from "./__interface__/month-domain-interface";
 
-export interface MonthProps {
-  month: number;
-}
-
-export class Month extends ValueObject<MonthProps> {
-  public static create (props: MonthProps): Month {
-    Month.validate(props)
-    return new Month(props)
+export class Month extends ValueObject<IMonthDomain> {
+  public static create(props: IMonthDomain): Month {
+    Month.validate(props);
+    return new Month(props);
   }
 
-  public get month (): MonthProps['month'] {
-    return this.props.month
+  public get month(): IMonthDomain["month"] {
+    return this.props.month;
   }
 
-  private static validate (props: MonthProps) {
+  private static validate(props: IMonthDomain) {
     if (!(props.month >= 1 && props.month <= 12)) {
-      throw new Error('月は1~12で指定してください')
+      throw new Error("月は1~12で指定してください");
     }
   }
 }

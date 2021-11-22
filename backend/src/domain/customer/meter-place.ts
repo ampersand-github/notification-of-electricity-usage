@@ -1,16 +1,13 @@
 import { ValueObject } from '../__shared__/value-object'
+import {IMeterPlaceDomain} from "./__interface__/meter-place-domain-interface";
 
-export interface MeterPlaceProps {
-  meterPlace: number;
-}
-
-export class MeterPlace extends ValueObject<MeterPlaceProps> {
-  public static create (props: MeterPlaceProps): MeterPlace {
+export class MeterPlace extends ValueObject<IMeterPlaceDomain> {
+  public static create (props: IMeterPlaceDomain): MeterPlace {
     MeterPlace.validate(props)
     return new MeterPlace(props)
   }
 
-  public get meterPlace () :MeterPlaceProps['meterPlace'] {
+  public get meterPlace () :IMeterPlaceDomain['meterPlace'] {
     return this.props.meterPlace
   }
 
