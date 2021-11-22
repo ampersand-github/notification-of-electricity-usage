@@ -1,14 +1,15 @@
-import { MonthHistoryId } from '../month-history-id'
-import { MonthHistory } from '../month-history'
+import { MonthHistoryId } from "../month-history-id";
+import { MonthHistory } from "../month-history";
+import { Year } from "../year";
+import { Month } from "../month";
+import { CustomerId } from "src/domain/customer/customer-id";
 
 export interface IMonthHistoryRepository {
-  // todo idとyearとmonthから1つ指定できるようにする
   findById(monthHistoryId: MonthHistoryId): Promise<MonthHistory | null>;
-  findById(monthHistoryId: MonthHistoryId): Promise<MonthHistory | null>;
-  /*
-  findAll(): Promise<MonthMonthHistory[]>;
-  create(MonthMonthHistory: MonthMonthHistory): Promise<void>;
-  update(MonthMonthHistory: MonthMonthHistory): Promise<void>;
-  delete(MonthMonthHistory: MonthMonthHistory): Promise<void>;
- */
+  findLatest(customerId: CustomerId): Promise<MonthHistory | null>;
+  findByDate(
+    customerId: CustomerId,
+    Year: Year,
+    Month: Month
+  ): Promise<MonthHistory | null>;
 }
