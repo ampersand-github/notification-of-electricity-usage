@@ -1,8 +1,5 @@
 import { ValueObject } from '../__shared__/value-object'
-
-export interface ICodeDomain {
-  code: number;
-}
+import { ICodeDomain } from './__interface__/code-domain-interface'
 
 export class Code extends ValueObject<ICodeDomain> {
   public static create (props: ICodeDomain): Code {
@@ -14,7 +11,6 @@ export class Code extends ValueObject<ICodeDomain> {
     return this.props.code
   }
 
-  // todo 値オブジェクトに委譲したい
   private static validate (props: ICodeDomain) {
     if (String(props.code).length > 2) {
       throw new Error('電力会社コードは2桁の値で指定してください')
