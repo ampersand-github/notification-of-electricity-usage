@@ -8,7 +8,9 @@ const meterReaderProps: IMeterReaderDomain = {
 
 describe('MeterReader', () => {
   it('createできる', () => {
-    expect(MeterReader.create(meterReaderProps)).toEqual(expect.any(MeterReader))
+    expect(MeterReader.create(meterReaderProps)).toEqual(
+      expect.any(MeterReader)
+    )
   })
 
   it('restoreできる', () => {
@@ -17,7 +19,9 @@ describe('MeterReader', () => {
       expect.any(MeterReader)
     )
     expect(
-      MeterReader.restore(meterReaderProps, meterReaderId).id.equals(meterReaderId)
+      MeterReader.restore(meterReaderProps, meterReaderId).id.equals(
+        meterReaderId
+      )
     ).toBe(true)
   })
 })

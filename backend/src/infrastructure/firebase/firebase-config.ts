@@ -13,14 +13,13 @@ export const firebaseConfig = {
 
  */
 export const firebaseConfig = {
-  type: "",
-  projectId:  "",
-  privateKeyId: "",
-  privateKey:  "",
-  clientEmail: "",
-  authUri:  "",
-  tokenUri:  "",
-  authProviderX509CertUrl:  "",
-  clientC509CertUrl: "",
+  type: '',
+  projectId: '',
+  privateKeyId: '',
+  privateKey: '',
+  clientEmail: '',
+  authUri: '',
+  tokenUri: '',
+  authProviderX509CertUrl: '',
+  clientC509CertUrl: ''
 }
-

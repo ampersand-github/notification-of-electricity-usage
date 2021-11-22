@@ -7,7 +7,9 @@ export class ContactDetailsFindByIdUsecase {
   public constructor (readonly repository: IContactDetailsRepository) {}
 
   public async do (id: string): Promise<ContactDetailsOutputDto> {
-    const contactDetails: ContactDetails = await this.repository.findById(ContactDetailsId.restore(id))
+    const contactDetails: ContactDetails = await this.repository.findById(
+      ContactDetailsId.restore(id)
+    )
     return new ContactDetailsOutputDto(contactDetails)
   }
 }

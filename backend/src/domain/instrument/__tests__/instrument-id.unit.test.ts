@@ -18,7 +18,9 @@ describe('InstrumentId', () => {
       InstrumentId.restore('test-id').equals(InstrumentId.restore('test-id'))
     ).toBe(true)
     expect(
-      InstrumentId.restore('test-id').equals(InstrumentId.restore('not-equal-id'))
+      InstrumentId.restore('test-id').equals(
+        InstrumentId.restore('not-equal-id')
+      )
     ).toBe(false)
   })
 })

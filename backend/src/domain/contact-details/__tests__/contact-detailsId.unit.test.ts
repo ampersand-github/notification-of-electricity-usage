@@ -8,16 +8,21 @@ const InstrumentProps: IContactDetailsDomain = {
 
 describe('Instrument', () => {
   it('createできる', () => {
-    expect(ContactDetails.create(InstrumentProps)).toEqual(expect.any(ContactDetails))
+    expect(ContactDetails.create(InstrumentProps)).toEqual(
+      expect.any(ContactDetails)
+    )
   })
 
   it('restoreできる', () => {
-    const contactDetailsId: ContactDetailsId = ContactDetailsId.restore('test-id')
+    const contactDetailsId: ContactDetailsId =
+      ContactDetailsId.restore('test-id')
     expect(ContactDetails.restore(InstrumentProps, contactDetailsId)).toEqual(
       expect.any(ContactDetails)
     )
     expect(
-      ContactDetails.restore(InstrumentProps, contactDetailsId).id.equals(contactDetailsId)
+      ContactDetails.restore(InstrumentProps, contactDetailsId).id.equals(
+        contactDetailsId
+      )
     ).toBe(true)
   })
 })

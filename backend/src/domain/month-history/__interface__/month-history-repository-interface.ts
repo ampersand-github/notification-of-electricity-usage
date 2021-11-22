@@ -1,8 +1,8 @@
-import { MonthHistoryId } from "../month-history-id";
-import { MonthHistory } from "../month-history";
-import { Year } from "../year";
-import { Month } from "../month";
-import { CustomerId } from "src/domain/customer/customer-id";
+import { MonthHistoryId } from '../month-history-id'
+import { MonthHistory } from '../month-history'
+import { Year } from '../year'
+import { Month } from '../month'
+import { CustomerId } from 'src/domain/customer/customer-id'
 
 export interface IMonthHistoryRepository {
   findById(monthHistoryId: MonthHistoryId): Promise<MonthHistory | null>;

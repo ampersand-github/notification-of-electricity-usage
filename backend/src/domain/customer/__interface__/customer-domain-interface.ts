@@ -9,7 +9,7 @@ export interface ICustomerDomain {
   address: string;
   customerNumber: CustomerNumber;
   monthHistoryId: MonthHistoryId;
-  supplyPointSpecificNumberId:SupplyPointSpecificNumberId
-  contractDetailsId:ContactDetailsId
-  instrumentId:InstrumentId
+  supplyPointSpecificNumberId: SupplyPointSpecificNumberId;
+  contractDetailsId: ContactDetailsId;
+  instrumentId: InstrumentId;
 }

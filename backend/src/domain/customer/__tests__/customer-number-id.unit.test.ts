@@ -6,7 +6,9 @@ describe('CustomerNumberId', () => {
   })
 
   it('restoreできる', () => {
-    expect(CustomerNumberId.restore('test-id')).toEqual(expect.any(CustomerNumberId))
+    expect(CustomerNumberId.restore('test-id')).toEqual(
+      expect.any(CustomerNumberId)
+    )
   })
 
   it('toStringできる', () => {
@@ -15,10 +17,14 @@ describe('CustomerNumberId', () => {
 
   it('equalsできる', () => {
     expect(
-      CustomerNumberId.restore('test-id').equals(CustomerNumberId.restore('test-id'))
+      CustomerNumberId.restore('test-id').equals(
+        CustomerNumberId.restore('test-id')
+      )
     ).toBe(true)
     expect(
-      CustomerNumberId.restore('test-id').equals(CustomerNumberId.restore('not-equal-id'))
+      CustomerNumberId.restore('test-id').equals(
+        CustomerNumberId.restore('not-equal-id')
+      )
     ).toBe(false)
   })
 })

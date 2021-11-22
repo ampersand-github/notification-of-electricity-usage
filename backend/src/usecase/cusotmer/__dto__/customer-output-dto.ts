@@ -1,4 +1,4 @@
-import { Customer } from "src/domain/customer/customer";
+import { Customer } from 'src/domain/customer/customer'
 
 export class CustomerOutputDto {
   public readonly name: string;
@@ -10,16 +10,16 @@ export class CustomerOutputDto {
   public readonly supplyPointSpecificNumberId: string;
   public readonly contractDetailsId: string;
   public readonly instrumentId: string;
-  public constructor(customer: Customer) {
-    this.name = customer.name;
-    this.address = customer.address;
-    this.meterDate = customer.customerNumber.meterDate;
-    this.meterPlace = customer.customerNumber.meterPlace;
-    this.othersNumber = customer.customerNumber.othersNumber;
-    this.monthHistoryId = customer.monthHistoryId.toString();
+  public constructor (customer: Customer) {
+    this.name = customer.name
+    this.address = customer.address
+    this.meterDate = customer.customerNumber.meterDate
+    this.meterPlace = customer.customerNumber.meterPlace
+    this.othersNumber = customer.customerNumber.othersNumber
+    this.monthHistoryId = customer.monthHistoryId.toString()
     this.supplyPointSpecificNumberId =
-      customer.supplyPointSpecificNumberId.toString();
-    this.contractDetailsId = customer.contractDetailsId.toString();
-    this.instrumentId = customer.instrumentId.toString();
+      customer.supplyPointSpecificNumberId.toString()
+    this.contractDetailsId = customer.contractDetailsId.toString()
+    this.instrumentId = customer.instrumentId.toString()
   }
 }

@@ -5,6 +5,7 @@ import { CustomerId } from 'src/domain/customer/customer-id'
 import { Year } from '../year'
 import { Month } from '../month'
 import { ReadingDate } from '../reading-date'
+import { MeterReaderId } from 'src/domain/meter-reader/meter-reader-id'
 
 describe('MonthHistory', () => {
   const historyProps: IMonthHistoryDomain = {
@@ -13,9 +14,12 @@ describe('MonthHistory', () => {
     month: Month.create({ month: 11 }),
     price: 1000,
     meter: 1000,
-    readingDate: ReadingDate.create({ readingDate: new Date('2021-11-22T09:00:00') }),
+    readingDate: ReadingDate.create({
+      readingDate: new Date('2021-11-22T09:00:00')
+    }),
     start: new Date('2021-11-22T09:00:00'),
-    end: new Date('2021-11-19T09:00:00')
+    end: new Date('2021-11-19T09:00:00'),
+    meterReaderId: MeterReaderId.create()
   }
 
   it('createできる', () => {

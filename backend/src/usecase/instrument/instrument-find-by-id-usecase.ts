@@ -7,7 +7,9 @@ export class InstrumentFindByIdUsecase {
   public constructor (readonly repository: IInstrumentRepository) {}
 
   public async do (id: string): Promise<InstrumentOutputDto> {
-    const instrument: Instrument = await this.repository.findById(InstrumentId.restore(id))
+    const instrument: Instrument = await this.repository.findById(
+      InstrumentId.restore(id)
+    )
     return new InstrumentOutputDto(instrument)
   }
 }

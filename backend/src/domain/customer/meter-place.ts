@@ -1,5 +1,5 @@
 import { ValueObject } from '../__shared__/value-object'
-import {IMeterPlaceDomain} from "./__interface__/meter-place-domain-interface";
+import { IMeterPlaceDomain } from './__interface__/meter-place-domain-interface'
 
 export class MeterPlace extends ValueObject<IMeterPlaceDomain> {
   public static create (props: IMeterPlaceDomain): MeterPlace {
@@ -7,7 +7,7 @@ export class MeterPlace extends ValueObject<IMeterPlaceDomain> {
     return new MeterPlace(props)
   }
 
-  public get meterPlace () :IMeterPlaceDomain['meterPlace'] {
+  public get meterPlace (): IMeterPlaceDomain['meterPlace'] {
     return this.props.meterPlace
   }
 

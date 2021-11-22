@@ -9,7 +9,9 @@ describe('Year', () => {
       })
       it('5桁はエラー', () => {
         const data: YearProps = { year: 20201 }
-        expect(() => { Year.create(data) }).toThrowError()
+        expect(() => {
+          Year.create(data)
+        }).toThrowError()
       })
     })
   })

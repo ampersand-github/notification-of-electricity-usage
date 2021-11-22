@@ -1,5 +1,5 @@
 import { ValueObject } from '../__shared__/value-object'
-import {IReadingDateDomain} from "./__interface__/reading-date-domain-interface";
+import { IReadingDateDomain } from './__interface__/reading-date-domain-interface'
 
 export class ReadingDate extends ValueObject<IReadingDateDomain> {
   public static create (props: IReadingDateDomain): ReadingDate {

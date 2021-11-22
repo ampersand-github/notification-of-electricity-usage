@@ -18,7 +18,9 @@ describe('MeterReaderId', () => {
       MeterReaderId.restore('test-id').equals(MeterReaderId.restore('test-id'))
     ).toBe(true)
     expect(
-      MeterReaderId.restore('test-id').equals(MeterReaderId.restore('not-equal-id'))
+      MeterReaderId.restore('test-id').equals(
+        MeterReaderId.restore('not-equal-id')
+      )
     ).toBe(false)
   })
 })

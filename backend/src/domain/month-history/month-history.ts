@@ -54,6 +54,10 @@ export class MonthHistory extends AggregateRoot<
     return this.props.end
   }
 
+  public get meterReaderId (): IMonthHistoryDomain['meterReaderId'] {
+    return this.props.meterReaderId
+  }
+
   private static validate (props: IMonthHistoryDomain) {
     if (props.year.year !== props.readingDate.readingYear) {
       throw new Error('検針日と年が異なります')

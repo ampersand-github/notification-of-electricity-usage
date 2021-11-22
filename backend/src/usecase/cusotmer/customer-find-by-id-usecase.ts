@@ -7,7 +7,9 @@ export class CustomerFindByIdUsecase {
   public constructor (readonly repository: ICustomerRepository) {}
 
   public async do (id: string): Promise<CustomerOutputDto> {
-    const customer: Customer = await this.repository.findById(CustomerId.restore(id))
+    const customer: Customer = await this.repository.findById(
+      CustomerId.restore(id)
+    )
     return new CustomerOutputDto(customer)
   }
 }

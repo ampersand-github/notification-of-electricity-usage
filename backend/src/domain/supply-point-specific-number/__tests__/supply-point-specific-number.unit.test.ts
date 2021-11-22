@@ -11,16 +11,25 @@ describe('SupplyPointSpecificNumber', () => {
     othersNumber: OthersNumber.create({ othersNumber: 1234567891234567 })
   }
   it('createできる', () => {
-    expect(SupplyPointSpecificNumber.create(supplyPointSpecificNumberProps)).toEqual(expect.any(SupplyPointSpecificNumber))
+    expect(
+      SupplyPointSpecificNumber.create(supplyPointSpecificNumberProps)
+    ).toEqual(expect.any(SupplyPointSpecificNumber))
   })
 
   it('restoreできる', () => {
-    const supplyPointSpecificNumberId: SupplyPointSpecificNumberId = SupplyPointSpecificNumberId.restore('test-id')
-    expect(SupplyPointSpecificNumber.restore(supplyPointSpecificNumberProps, supplyPointSpecificNumberId)).toEqual(
-      expect.any(SupplyPointSpecificNumber)
-    )
+    const supplyPointSpecificNumberId: SupplyPointSpecificNumberId =
+      SupplyPointSpecificNumberId.restore('test-id')
     expect(
-      SupplyPointSpecificNumber.restore(supplyPointSpecificNumberProps, supplyPointSpecificNumberId).id.equals(supplyPointSpecificNumberId)
+      SupplyPointSpecificNumber.restore(
+        supplyPointSpecificNumberProps,
+        supplyPointSpecificNumberId
+      )
+    ).toEqual(expect.any(SupplyPointSpecificNumber))
+    expect(
+      SupplyPointSpecificNumber.restore(
+        supplyPointSpecificNumberProps,
+        supplyPointSpecificNumberId
+      ).id.equals(supplyPointSpecificNumberId)
     ).toBe(true)
   })
 })

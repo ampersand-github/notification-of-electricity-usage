@@ -7,7 +7,9 @@ export class MeterReaderFindByIdUsecase {
   public constructor (readonly repository: IMeterReaderRepository) {}
 
   public async do (id: string): Promise<MeterReaderOutputDto> {
-    const meterReader: MeterReader = await this.repository.findById(MeterReaderId.restore(id))
+    const meterReader: MeterReader = await this.repository.findById(
+      MeterReaderId.restore(id)
+    )
     return new MeterReaderOutputDto(meterReader)
   }
 }

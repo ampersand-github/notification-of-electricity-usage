@@ -14,9 +14,9 @@ describe('MeterReaderId', () => {
   })
 
   it('equalsできる', () => {
-    expect(
-      AreaId.restore('test-id').equals(AreaId.restore('test-id'))
-    ).toBe(true)
+    expect(AreaId.restore('test-id').equals(AreaId.restore('test-id'))).toBe(
+      true
+    )
     expect(
       AreaId.restore('test-id').equals(AreaId.restore('not-equal-id'))
     ).toBe(false)

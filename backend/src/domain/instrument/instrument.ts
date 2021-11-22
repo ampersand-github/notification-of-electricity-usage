@@ -7,7 +7,10 @@ export class Instrument extends AggregateRoot<IInstrumentDomain, InstrumentId> {
     return new Instrument(props, InstrumentId.create())
   }
 
-  public static restore (props: IInstrumentDomain, id: InstrumentId): Instrument {
+  public static restore (
+    props: IInstrumentDomain,
+    id: InstrumentId
+  ): Instrument {
     return new Instrument(props, id)
   }
 

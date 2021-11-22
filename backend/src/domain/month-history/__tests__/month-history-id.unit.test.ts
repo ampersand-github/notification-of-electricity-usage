@@ -6,7 +6,9 @@ describe('MonthHistoryId', () => {
   })
 
   it('restoreできる', () => {
-    expect(MonthHistoryId.restore('test-id')).toEqual(expect.any(MonthHistoryId))
+    expect(MonthHistoryId.restore('test-id')).toEqual(
+      expect.any(MonthHistoryId)
+    )
   })
 
   it('toStringできる', () => {
@@ -15,10 +17,14 @@ describe('MonthHistoryId', () => {
 
   it('equalsできる', () => {
     expect(
-      MonthHistoryId.restore('test-id').equals(MonthHistoryId.restore('test-id'))
+      MonthHistoryId.restore('test-id').equals(
+        MonthHistoryId.restore('test-id')
+      )
     ).toBe(true)
     expect(
-      MonthHistoryId.restore('test-id').equals(MonthHistoryId.restore('not-equal-id'))
+      MonthHistoryId.restore('test-id').equals(
+        MonthHistoryId.restore('not-equal-id')
+      )
     ).toBe(false)
   })
 })

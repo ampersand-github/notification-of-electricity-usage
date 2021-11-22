@@ -7,7 +7,9 @@ export class FindLatestUsecase {
   public constructor (readonly repository: IMonthHistoryRepository) {}
 
   public async do (id: string): Promise<MonthHistoryOutputDto> {
-    const history: MonthHistory = await this.repository.findLatest(MonthHistoryId.restore(id))
+    const history: MonthHistory = await this.repository.findLatest(
+      MonthHistoryId.restore(id)
+    )
     return new MonthHistoryOutputDto(history)
   }
 }
