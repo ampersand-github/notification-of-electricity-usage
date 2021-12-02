@@ -3,7 +3,8 @@ import { VoltageId } from '../voltage-id'
 import { IVoltageDomain } from '../__interface__/voltage-domain-interface'
 
 const voltageProps: IVoltageDomain = {
-  name: '名前'
+  code:0,
+  name: "低圧"
 }
 
 describe('Voltage', () => {

@@ -17,6 +17,10 @@ export class Voltage extends AggregateRoot<
     return new Voltage(props, id)
   }
 
+  public get code (): IVoltageDomain['code'] {
+    return this.props.code
+  }
+
   public get name (): IVoltageDomain['name'] {
     return this.props.name
   }
