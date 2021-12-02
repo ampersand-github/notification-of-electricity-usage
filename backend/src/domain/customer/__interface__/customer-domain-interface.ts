@@ -1,4 +1,4 @@
-import { ContactDetailsId } from 'src/domain/contact-details/contact-details-id'
+import { ContactDetailId } from 'src/domain/contact-detail/contact-detail-id'
 import { InstrumentId } from 'src/domain/instrument/instrument-id'
 import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
 import { SupplyPointSpecificNumberId } from 'src/domain/supply-point-specific-number/supply-point-specific-number-id'
@@ -10,6 +10,6 @@ export interface ICustomerDomain {
   customerNumber: CustomerNumber;
   monthHistoryId: MonthHistoryId;
   supplyPointSpecificNumberId: SupplyPointSpecificNumberId;
-  contractDetailsId: ContactDetailsId;
+  contractDetailsId: ContactDetailId;
   instrumentId: InstrumentId;
 }
