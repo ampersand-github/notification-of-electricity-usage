@@ -1,26 +1,26 @@
-import { IMeterReaderDomain } from 'src/domain/meter-reader/__interface__/meter-reader-domain-interface'
 import { Voltage } from '../voltage'
 import { VoltageId } from '../voltage-id'
+import { IVoltageDomain } from '../__interface__/voltage-domain-interface'
 
-const meterReaderProps: IMeterReaderDomain = {
+const voltageProps: IVoltageDomain = {
   name: '名前'
 }
 
-describe('MeterReader', () => {
+describe('Voltage', () => {
   it('createできる', () => {
-    expect(Voltage.create(meterReaderProps)).toEqual(
+    expect(Voltage.create(voltageProps)).toEqual(
       expect.any(Voltage)
     )
   })
 
   it('restoreできる', () => {
-    const meterReaderId: VoltageId = VoltageId.restore('test-id')
-    expect(Voltage.restore(meterReaderProps, meterReaderId)).toEqual(
+    const voltageId: VoltageId = VoltageId.restore('test-id')
+    expect(Voltage.restore(voltageProps, voltageId)).toEqual(
       expect.any(Voltage)
     )
     expect(
-      Voltage.restore(meterReaderProps, meterReaderId).id.equals(
-        meterReaderId
+      Voltage.restore(voltageProps, voltageId).id.equals(
+          voltageId
       )
     ).toBe(true)
   })
