@@ -12,8 +12,8 @@ export class Area extends AggregateRoot<IAreaDomain, AreaId> {
     return new Area(props, id)
   }
 
-  public get code (): ICodeDomain['code'] {
-    return this.props.code.code
+  public get code (): IAreaDomain['code'] {
+    return this.props.code
   }
 
   public get name (): IAreaDomain['name'] {
