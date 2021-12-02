@@ -1,6 +1,6 @@
-import { Month } from 'src/domain/history/month'
-import { MonthHistoryId } from 'src/domain/history/month-history-id'
-import { Year } from 'src/domain/history/year'
+import { Month } from 'src/domain/month-history/month'
+import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
+import { Year } from 'src/domain/month-history/year'
 import { IMonthHistoryRepository } from 'src/domain/history/__interface__/month-history-repository-interface'
 import { MonthHistoryOutputDto } from './__dto__/month-history-output-dto'
 
