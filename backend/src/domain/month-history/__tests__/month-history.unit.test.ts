@@ -1,4 +1,3 @@
-import { IMonthHistoryDomain } from '../__interface__/month-history-domain-interface'
 import { MonthHistory } from '../month-history'
 import { MonthHistoryId } from '../month-history-id'
 import { CustomerId } from 'src/domain/customer/customer-id'
@@ -6,6 +5,7 @@ import { Year } from '../year'
 import { Month } from '../month'
 import { ReadingDate } from '../reading-date'
 import { MeterReaderId } from 'src/domain/meter-reader/meter-reader-id'
+import { IMonthHistoryDomain } from 'src/domain/month-history/__interface__/month-history-domain-interface'
 
 describe('MonthHistory', () => {
   const historyProps: IMonthHistoryDomain = {

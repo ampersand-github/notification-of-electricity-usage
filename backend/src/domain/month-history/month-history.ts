@@ -2,27 +2,27 @@ import { AggregateRoot } from '../__shared__/aggregate-root'
 import { Month } from './month'
 import { MonthHistoryId } from './month-history-id'
 import { Year } from './year'
-import { IMonthHistoryDomain } from './__interface__/month-history-domain-interface'
 import { ReadingDate } from './reading-date'
+import { IHistoryDomain } from './__interface__/history-domain-interface'
 
 export class MonthHistory extends AggregateRoot<
-  IMonthHistoryDomain,
+  IHistoryDomain,
   MonthHistoryId
 > {
-  public static create (props: IMonthHistoryDomain): MonthHistory {
+  public static create (props: IHistoryDomain): MonthHistory {
     MonthHistory.validate(props)
     return new MonthHistory(props, MonthHistoryId.create())
   }
 
   public static restore (
-    props: IMonthHistoryDomain,
+    props: IHistoryDomain,
     id: MonthHistoryId
   ): MonthHistory {
     MonthHistory.validate(props)
     return new MonthHistory(props, id)
   }
 
-  public get customerId (): IMonthHistoryDomain['customerId'] {
+  public get customerId (): IHistoryDomain['customerId'] {
     return this.props.customerId
   }
 
@@ -34,11 +34,11 @@ export class MonthHistory extends AggregateRoot<
     return this.props.month.month
   }
 
-  public get price (): IMonthHistoryDomain['price'] {
+  public get price (): IHistoryDomain['price'] {
     return this.props.price
   }
 
-  public get meter (): IMonthHistoryDomain['meter'] {
+  public get meter (): IHistoryDomain['meter'] {
     return this.props.meter
   }
 
@@ -46,19 +46,19 @@ export class MonthHistory extends AggregateRoot<
     return this.props.readingDate.readingFullDate
   }
 
-  public get start (): IMonthHistoryDomain['start'] {
+  public get start (): IHistoryDomain['start'] {
     return this.props.start
   }
 
-  public get end (): IMonthHistoryDomain['end'] {
+  public get end (): IHistoryDomain['end'] {
     return this.props.end
   }
 
-  public get meterReaderId (): IMonthHistoryDomain['meterReaderId'] {
+  public get meterReaderId (): IHistoryDomain['meterReaderId'] {
     return this.props.meterReaderId
   }
 
-  private static validate (props: IMonthHistoryDomain) {
+  private static validate (props: IHistoryDomain) {
     if (props.year.year !== props.readingDate.readingYear) {
       throw new Error('検針日と年が異なります')
     }
