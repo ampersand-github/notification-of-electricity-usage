@@ -1,6 +1,4 @@
-import { Code } from '../code'
-
 export interface IAreaDomain {
-  code: Code;
+  code: number;
   name: string;
 }
