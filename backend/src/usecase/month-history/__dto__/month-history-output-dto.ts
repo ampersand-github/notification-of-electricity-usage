@@ -1,4 +1,4 @@
-import { MonthHistory } from 'src/domain/month-history/month-history'
+import { MonthHistory } from 'src/domain/history/month-history'
 
 export class MonthHistoryOutputDto {
   public readonly year: number;

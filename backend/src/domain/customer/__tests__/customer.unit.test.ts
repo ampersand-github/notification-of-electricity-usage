@@ -1,6 +1,6 @@
 import { ContactDetailId } from 'src/domain/contact-detail/contact-detail-id'
 import { InstrumentId } from 'src/domain/instrument/instrument-id'
-import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
+import { MonthHistoryId } from 'src/domain/history/month-history-id'
 import { SupplyPointSpecificNumberId } from 'src/domain/supply-point-specific-number/supply-point-specific-number-id'
 import { Customer } from '../customer'
 import { CustomerId } from '../customer-id'

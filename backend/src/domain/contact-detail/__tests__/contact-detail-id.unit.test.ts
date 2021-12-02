@@ -1,4 +1,4 @@
-import { ContactDetailId } from '../contact-details-id'
+import { ContactDetailId } from '../contact-detail-id'
 
 describe('ContactDetailsId', () => {
   it('createできる', () => {

@@ -1,4 +1,4 @@
-import { VoltageId } from "../voltage-id"
+import { VoltageId } from '../voltage-id'
 
 describe('MeterReaderId', () => {
   it('createできる', () => {

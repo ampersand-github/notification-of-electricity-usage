@@ -1,5 +1,6 @@
-import { Month } from 'src/domain/history/month'
-import { IMonthDomain } from '../__interface__/month-domain-interface'
+import { Year } from '../year'
+import { Month } from '../month'
+import { IMonthDomain } from 'src/domain/month-history/__interface__/month-domain-interface'
 
 describe('Year', () => {
   describe('validate', () => {

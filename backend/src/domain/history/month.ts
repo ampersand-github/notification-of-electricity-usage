@@ -1,5 +1,5 @@
+import { IMonthDomain } from '../month-history/__interface__/month-domain-interface'
 import { ValueObject } from '../__shared__/value-object'
-import { IMonthDomain } from './__interface__/month-domain-interface'
 
 export class Month extends ValueObject<IMonthDomain> {
   public static create (props: IMonthDomain): Month {

@@ -1,7 +1,6 @@
 import { AggregateRoot } from '../__shared__/aggregate-root'
 import { AreaId } from './area-id'
 import { IAreaDomain } from './__interface__/area-domain-interface'
-import { ICodeDomain } from './__interface__/code-domain-interface'
 
 export class Area extends AggregateRoot<IAreaDomain, AreaId> {
   public static create (props: IAreaDomain): Area {

@@ -1,6 +1,6 @@
-import { IMeterReaderDomain } from "src/domain/meter-reader/__interface__/meter-reader-domain-interface"
-import { Voltage } from "../voltage"
-import { VoltageId } from "../voltage-id"
+import { IMeterReaderDomain } from 'src/domain/meter-reader/__interface__/meter-reader-domain-interface'
+import { Voltage } from '../voltage'
+import { VoltageId } from '../voltage-id'
 
 const meterReaderProps: IMeterReaderDomain = {
   name: '名前'

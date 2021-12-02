@@ -33,30 +33,30 @@ describe('CustomerNumber', () => {
   describe('combineCustomerNumber', () => {
     it('0埋めがないとき', () => {
       const customerNumberProps: ICustomerNumberDomain = {
-        meterDate: MeterDate.create({meterDate: 11}),
-        meterPlace: MeterPlace.create({meterPlace: 22}),
-        othersNumber: OthersNumber.create({othersNumber: 3333333333})
+        meterDate: MeterDate.create({ meterDate: 11 }),
+        meterPlace: MeterPlace.create({ meterPlace: 22 }),
+        othersNumber: OthersNumber.create({ othersNumber: 3333333333 })
       }
       const customerNumber = CustomerNumber.create(customerNumberProps)
-      expect(customerNumber.fullCustomerNumber).toBe("11223333333333")
+      expect(customerNumber.fullCustomerNumber).toBe('11223333333333')
     })
     it('0埋めがあるとき', () => {
       const customerNumberProps: ICustomerNumberDomain = {
-        meterDate: MeterDate.create({meterDate: 1}),
-        meterPlace: MeterPlace.create({meterPlace: 2}),
-        othersNumber: OthersNumber.create({othersNumber: 3})
+        meterDate: MeterDate.create({ meterDate: 1 }),
+        meterPlace: MeterPlace.create({ meterPlace: 2 }),
+        othersNumber: OthersNumber.create({ othersNumber: 3 })
       }
       const customerNumber = CustomerNumber.create(customerNumberProps)
-      expect(customerNumber.fullCustomerNumber).toBe("01020000000003")
+      expect(customerNumber.fullCustomerNumber).toBe('01020000000003')
     })
     it('0埋めがあるとき', () => {
       const customerNumberProps: ICustomerNumberDomain = {
-        meterDate: MeterDate.create({meterDate: 1}),
-        meterPlace: MeterPlace.create({meterPlace: 2}),
-        othersNumber: OthersNumber.create({othersNumber: 333333333})
+        meterDate: MeterDate.create({ meterDate: 1 }),
+        meterPlace: MeterPlace.create({ meterPlace: 2 }),
+        othersNumber: OthersNumber.create({ othersNumber: 333333333 })
       }
       const customerNumber = CustomerNumber.create(customerNumberProps)
-      expect(customerNumber.fullCustomerNumber).toBe("01020333333333")
+      expect(customerNumber.fullCustomerNumber).toBe('01020333333333')
     })
   })
 })
