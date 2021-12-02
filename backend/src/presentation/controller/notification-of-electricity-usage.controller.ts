@@ -13,8 +13,8 @@ import { MockInstrumentRepository } from 'src/infrastructure/mock-repository/moc
 import { FindLatestUsecase } from 'src/usecase/month-history/find-latest-usecase'
 import { InstrumentFindByIdUsecase } from 'src/usecase/instrument/instrument-find-by-id-usecase'
 import { MockCustomerRepository } from 'src/infrastructure/mock-repository/mock-customer-repository'
-import {MeterReaderFindByIdUsecase} from "../../usecase/meter-reader/meter-reader-find-by-id-usecase";
-import {MockMeterReaderRepository} from "../../infrastructure/mock-repository/mock-meter-reader-repository";
+import { MeterReaderFindByIdUsecase } from '../../usecase/meter-reader/meter-reader-find-by-id-usecase'
+import { MockMeterReaderRepository } from '../../infrastructure/mock-repository/mock-meter-reader-repository'
 
 @UseGuards(AuthGuard)
 @Controller('notification-of-electricity-usage')
@@ -44,7 +44,7 @@ export class NotificationOfElectricityUsageController {
       const instrumentOutputDto = await instrumentFindByIdUsecase.do(customerOutputDto.instrumentId)
       const meterReaderOutputDto = await meterReaderFindByIdUsecase.do(monthHistoryOutputDto.meterReaderId)
       // CQRSで特定地点番号　customerのidと供給地点特定番号から取得　これはなんだ？CQRS？ドメインサービス？ -> customerのドメインサービスかも
-      const latestResponseDto = ""  // これらの汎用DTOをまとめて電気料金使用のお知らせ専用DTOをつくる
+      const latestResponseDto = '' // これらの汎用DTOをまとめて電気料金使用のお知らせ専用DTOをつくる
     } catch (error) {
       throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR)
     }

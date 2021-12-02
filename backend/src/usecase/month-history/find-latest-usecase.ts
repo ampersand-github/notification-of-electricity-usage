@@ -1,6 +1,6 @@
 import { MonthHistory } from 'src/domain/month-history/month-history'
 import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
-import { IMonthHistoryRepository } from 'src/domain/month-history/__interface__/month-history-repository-interface'
+import { IMonthHistoryRepository } from 'src/domain/history/__interface__/month-history-repository-interface'
 import { MonthHistoryOutputDto } from './__dto__/month-history-output-dto'
 
 export class FindLatestUsecase {
