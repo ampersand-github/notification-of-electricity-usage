@@ -1,11 +1,11 @@
-import { AggregateRoot } from '../__shared__/aggregate-root'
-import { CustomerNumberId } from './customer-number-id'
+import { Entity } from 'src/domain/__shared__/entity'
+import { OthersNumber } from 'src/domain/supply-point-specific-number/others-number'
 import { ICustomerNumberDomain } from './__interface__/customer-number-domain-interface'
-import { MeterDate } from './meter-date'
-import { MeterPlace } from './meter-place'
-import { OthersNumber } from '../supply-point-specific-number/others-number'
+import { CustomerNumberId } from './customer-number-id'
+import { MeterPlace } from './value-objects/meter-place'
+import { IMeterDateDomain } from './value-objects/__interface__/meter-date-domain-interface'
 
-export class CustomerNumber extends AggregateRoot<
+export class CustomerNumber extends Entity<
   ICustomerNumberDomain,
   CustomerNumberId
 > {
@@ -22,7 +22,7 @@ export class CustomerNumber extends AggregateRoot<
     return new CustomerNumber(props, id)
   }
 
-  public get meterDate (): MeterDate['meterDate'] {
+  public get meterDate (): IMeterDateDomain['meterDate'] {
     return this.props.meterDate.meterDate
   }
 

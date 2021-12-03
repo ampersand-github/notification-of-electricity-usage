@@ -3,12 +3,12 @@ import { InstrumentId } from 'src/domain/instrument/instrument-id'
 import { SupplyPointSpecificNumberId } from 'src/domain/supply-point-specific-number/supply-point-specific-number-id'
 import { Customer } from '../customer'
 import { CustomerId } from '../customer-id'
-import { CustomerNumber } from '../customer-number'
 import { ICustomerDomain } from '../__interface__/customer-domain-interface'
-import { MeterDate } from '../meter-date'
-import { MeterPlace } from '../meter-place'
-import { OthersNumber } from '../others-number'
 import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
+import { CustomerNumber } from '../customer-number'
+import { MeterDate } from '../value-objects/meter-date'
+import { OthersNumber } from '../value-objects/others-number'
+import { MeterPlace } from '../value-objects/meter-place'
 
 describe('Customer', () => {
   const customerProps: ICustomerDomain = {

@@ -1,5 +1,5 @@
-import { MeterDate,  } from '../meter-date'
-import {IMeterDateDomain} from "../__interface__/meter-date-domain-interface";
+import { MeterDate } from '../meter-date'
+import { IMeterDateDomain } from '../__interface__/meter-date-domain-interface'
 
 describe('MeterDate', () => {
   it('0日はエラー', () => {

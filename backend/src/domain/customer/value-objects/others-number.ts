@@ -1,5 +1,5 @@
-import { ValueObject } from '../__shared__/value-object'
-import { IOthersNumberDomain } from './__interface__/others-number-domain-interface'
+import { IOthersNumberDomain } from 'src/domain/supply-point-specific-number/__interface__/others-number-domain-interface'
+import { ValueObject } from 'src/domain/__shared__/value-object'
 
 export class OthersNumber extends ValueObject<IOthersNumberDomain> {
   public static create (props: IOthersNumberDomain): OthersNumber {

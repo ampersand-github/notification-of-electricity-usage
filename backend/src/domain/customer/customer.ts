@@ -1,7 +1,7 @@
 import { AggregateRoot } from '../__shared__/aggregate-root'
 import { CustomerId } from './customer-id'
-import { ICustomerDomain } from './__interface__/customer-domain-interface'
 import { CustomerNumber } from './customer-number'
+import { ICustomerDomain } from './__interface__/customer-domain-interface'
 
 export class Customer extends AggregateRoot<ICustomerDomain, CustomerId> {
   public static create (props: ICustomerDomain): Customer {

@@ -1,5 +1,5 @@
 import { OthersNumber } from '../others-number'
-import {IOthersNumberDomain} from "../__interface__/others-number-domain-interface";
+import { IOthersNumberDomain } from '../__interface__/others-number-domain-interface'
 
 describe('OthersNumber', () => {
   it('11桁は異常', () => {

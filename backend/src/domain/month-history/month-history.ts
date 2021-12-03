@@ -3,7 +3,7 @@ import { Month } from './month'
 import { MonthHistoryId } from './month-history-id'
 import { Year } from './year'
 import { ReadingDate } from './reading-date'
-import {IMonthHistoryDomain} from "./__interface__/month-history-domain-interface";
+import { IMonthHistoryDomain } from './__interface__/month-history-domain-interface'
 
 export class MonthHistory extends AggregateRoot<
     IMonthHistoryDomain,
