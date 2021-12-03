@@ -7,7 +7,7 @@ export class IdentificationNumber extends ValueObject<IIdentificationNumberDomai
     return new IdentificationNumber(props)
   }
 
-  public get othersNumber (): IIdentificationNumberDomain['identificationNumber'] {
+  public get identificationNumber (): IIdentificationNumberDomain['identificationNumber'] {
     return this.props.identificationNumber
   }
 
