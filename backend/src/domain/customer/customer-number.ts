@@ -60,8 +60,6 @@ export class CustomerNumber extends Entity<
     const _othersNumber = String(othersNumber).padStart(10, '0')
     const fullCustomerNumber = _meterDate + _meterPlace + String(_othersNumber)
     if (String(fullCustomerNumber).length !== 14) {
-      console.log(String(fullCustomerNumber).length)
-      console.log(fullCustomerNumber)
       throw new Error('日程と所を含むお客様番号は14桁で入力してください')
     }
     return fullCustomerNumber
