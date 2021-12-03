@@ -8,11 +8,9 @@ describe('SpecificNumber', () => {
       IdentificationNumber.create(data)
     }).toThrowError()
   })
-  it('4は異常', () => {
+  it('4は正常', () => {
     const data: IIdentificationNumberDomain = { identificationNumber: 1234 }
-    expect(() => {
-      IdentificationNumber.create(data)
-    }).toThrowError()
+    expect(IdentificationNumber.create(data)).toEqual(expect.any(IdentificationNumber))
   })
   it('5は異常', () => {
     const data: IIdentificationNumberDomain = { identificationNumber: 12345 }

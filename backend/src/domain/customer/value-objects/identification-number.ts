@@ -12,8 +12,8 @@ export class IdentificationNumber extends ValueObject<IIdentificationNumberDomai
   }
 
   private static validate (props) {
-    if (String(props.identificationNumber).length !== 5) {
-      throw new Error('必ず５桁で入力してください。')
+    if (String(props.identificationNumber).length > 5) {
+      throw new Error('必ず５桁以下で入力してください。')
     }
   }
 }
