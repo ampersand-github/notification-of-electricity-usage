@@ -1,23 +1,19 @@
-import { ContactDetailId } from 'src/domain/contact-detail/contact-detail-id'
-import { InstrumentId } from 'src/domain/instrument/instrument-id'
-import { SupplyPointSpecificNumberId } from 'src/domain/supply-point-specific-number/supply-point-specific-number-id'
 import { Customer } from '../customer'
 import { CustomerId } from '../customer-id'
 import { ICustomerDomain } from '../__interface__/customer-domain-interface'
-import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
 import { CustomerNumber } from '../customer-number'
 import { MeterDate } from '../value-objects/meter-date'
 import { OthersNumber } from '../value-objects/others-number'
 import { MeterPlace } from '../value-objects/meter-place'
-import {IContactInfoDomain} from "../__interface__/contact-info-domain-interface";
-import {ContactDetail} from "../../contact-detail/contact-detail";
-import {Area} from "../../area/area";
-import {Voltage} from "../../voltage/voltage";
-import {Instrument} from "../../instrument/instrument";
-import {IdentificationNumber} from "../value-objects/identification-number";
-import {IPersonalInfoDomain} from "../__interface__/personal-info-domain-interface";
-import {ContactInfo} from "../contact-info";
-import {PersonalInfo} from "../personal-info";
+import { IContactInfoDomain } from '../__interface__/contact-info-domain-interface'
+import { ContactDetail } from '../../contact-detail/contact-detail'
+import { Area } from '../../area/area'
+import { Voltage } from '../../voltage/voltage'
+import { Instrument } from '../../instrument/instrument'
+import { IdentificationNumber } from '../value-objects/identification-number'
+import { IPersonalInfoDomain } from '../__interface__/personal-info-domain-interface'
+import { ContactInfo } from '../contact-info'
+import { PersonalInfo } from '../personal-info'
 
 describe('Customer', () => {
   const ContactInfoProps: IContactInfoDomain = {
@@ -38,7 +34,7 @@ describe('Customer', () => {
   }
   const customerProps: ICustomerDomain = {
     contactInfo: ContactInfo.create(ContactInfoProps),
-    personalInfo:PersonalInfo.create(personalInfoProps)
+    personalInfo: PersonalInfo.create(personalInfoProps)
   }
 
   it('createできる', () => {

@@ -10,6 +10,7 @@ import { Area } from '../area/area'
 import { Voltage } from '../voltage/voltage'
 import { Instrument } from '../instrument/instrument'
 import { IdentificationNumber } from './value-objects/identification-number'
+import { CustomerNumber } from './customer-number'
 
 export class Customer extends AggregateRoot<ICustomerDomain, CustomerId> {
   public static create (props: ICustomerDomain): Customer {
@@ -72,5 +73,9 @@ export class Customer extends AggregateRoot<ICustomerDomain, CustomerId> {
 
   public get identificationNumber ():IdentificationNumber['identificationNumber'] {
     return this.props.contactInfo.identificationNumber
+  }
+
+  public get fullCustomerNumber ():CustomerNumber['fullCustomerNumber'] {
+    return this.props.contactInfo.fullCustomerNumber
   }
 }
