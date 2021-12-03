@@ -9,6 +9,7 @@ import { Area } from '../area/area'
 import { Voltage } from '../voltage/voltage'
 import { Instrument } from '../instrument/instrument'
 import { IdentificationNumber } from './value-objects/identification-number'
+import { CustomerNumber } from './customer-number'
 
 export class ContactInfo extends Entity<IContactInfoDomain, ContactInfoId> {
   public static create (props: IContactInfoDomain): ContactInfo {
@@ -33,6 +34,10 @@ export class ContactInfo extends Entity<IContactInfoDomain, ContactInfoId> {
 
   public get othersNumber (): OthersNumber['othersNumber'] {
     return this.props.customerNumber.othersNumber
+  }
+
+  public get fullCustomerNumber (): CustomerNumber['fullCustomerNumber'] {
+    return this.props.customerNumber.fullCustomerNumber
   }
 
   // - - - - - - - - - -  それ以外 - - - - - - - - - -
@@ -64,7 +69,34 @@ export class ContactInfo extends Entity<IContactInfoDomain, ContactInfoId> {
     return this.props.instrument.name
   }
 
-  public get identificationNumber ():IdentificationNumber['identificationNumber'] {
+  public get identificationNumber (): IdentificationNumber['identificationNumber'] {
     return this.props.identificationNumber.identificationNumber
+  }
+
+  // 供給地点特定番号
+  public get supplyPointSpecificNumber (): string {
+    return ContactInfo.combineSupplyPointSpecificNumber(
+      this.areaCode,
+      this.voltageCode,
+      this.fullCustomerNumber,
+      this.identificationNumber
+    )
+  }
+
+  private static combineSupplyPointSpecificNumber (
+    areaCode: number,
+    voltageCode: number,
+    fullCustomerNumber: string,
+    identificationNumber: number
+  ): string {
+    const _areaCode = String(areaCode).padStart(2, '0')
+    const _voltageCode = String(voltageCode).padStart(1, '0')
+    const _identificationNumber = String(identificationNumber).padStart(5, '0')
+    const result =
+      _areaCode + _voltageCode + fullCustomerNumber + _identificationNumber
+    if (String(result).length !== 22) {
+      throw new Error('供給地点特定番号は22桁で設定してください')
+    }
+    return result
   }
 }
