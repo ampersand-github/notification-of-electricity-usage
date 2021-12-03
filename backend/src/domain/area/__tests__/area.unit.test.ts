@@ -1,11 +1,10 @@
 import { Area } from '../area'
 import { AreaId } from '../area-id'
-import { Code } from '../code'
 import { IAreaDomain } from '../__interface__/area-domain-interface'
 
 describe('Area', () => {
   const areaProps: IAreaDomain = {
-    code: Code.create({ code: 6 }),
+    code: 6,
     name: '関西電力'
   }
 
