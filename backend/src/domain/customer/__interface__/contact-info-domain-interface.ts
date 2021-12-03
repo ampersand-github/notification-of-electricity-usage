@@ -1,12 +1,15 @@
-import { IAreaDomain } from 'src/domain/area/__interface__/area-domain-interface'
-import { IInstrumentDomain } from 'src/domain/instrument/__interface__/instrument-domain-interface'
-import { IVoltageDomain } from 'src/domain/voltage/__interface__/voltage-domain-interface'
-import { CustomerNumber } from '../customer-number'
+import { Area } from 'src/domain/area/area';
+import { ContactDetail } from 'src/domain/contact-detail/contact-detail';
+import { Instrument } from 'src/domain/instrument/instrument';
+import { Voltage } from 'src/domain/voltage/voltage';
+import { CustomerNumber } from '../customer-number';
+import { IdentificationNumber } from '../value-objects/identification-number';
 
 export interface IContactInfoDomain {
   customerNumber : CustomerNumber,
-  area:IAreaDomain,
-  voltage:IVoltageDomain,
-  instrument:IInstrumentDomain,
-  specific: number // todo これ値オブジェクト化
+  contactDetail:ContactDetail
+  area:Area,
+  voltage:Voltage,
+  instrument:Instrument,
+  identificationNumber:IdentificationNumber
 }
