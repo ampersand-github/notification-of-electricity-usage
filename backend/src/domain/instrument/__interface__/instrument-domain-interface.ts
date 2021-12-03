@@ -1,4 +1,4 @@
 export interface IInstrumentDomain {
   name: string;
-  number: number;
+  code: number;
 }
