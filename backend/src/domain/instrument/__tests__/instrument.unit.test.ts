@@ -4,7 +4,7 @@ import { IInstrumentDomain } from '../__interface__/Instrument-domain-interface'
 
 const instrumentProps: IInstrumentDomain = {
   name: '名前',
-  number: 1
+  code: 1
 }
 
 describe('Instrument', () => {

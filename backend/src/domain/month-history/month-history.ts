@@ -3,7 +3,7 @@ import { Month } from './month'
 import { MonthHistoryId } from './month-history-id'
 import { Year } from './year'
 import { ReadingDate } from './reading-date'
-import {IMonthHistoryDomain} from "./__interface__/month-history-domain-interface";
+import { IMonthHistoryDomain } from './__interface__/month-history-domain-interface'
 
 export class MonthHistory extends AggregateRoot<
     IMonthHistoryDomain,
@@ -57,6 +57,8 @@ export class MonthHistory extends AggregateRoot<
   public get meterReaderId (): IMonthHistoryDomain['meterReaderId'] {
     return this.props.meterReaderId
   }
+  // todo 当時の個人情報
+  // todo 当時の契約情報
 
   private static validate (props: IMonthHistoryDomain) {
     if (props.year.year !== props.readingDate.readingYear) {

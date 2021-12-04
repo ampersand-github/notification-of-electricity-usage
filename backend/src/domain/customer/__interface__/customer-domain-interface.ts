@@ -1,15 +1,7 @@
-import { ContactDetailId } from 'src/domain/contact-detail/contact-detail-id'
-import { InstrumentId } from 'src/domain/instrument/instrument-id'
-import { MonthHistoryId } from 'src/domain/month-history/month-history-id'
-import { SupplyPointSpecificNumberId } from 'src/domain/supply-point-specific-number/supply-point-specific-number-id'
-import { CustomerNumber } from '../customer-number'
+import { PersonalInfo } from '../personal-info'
+import { ContactInfo } from '../contact-info'
 
 export interface ICustomerDomain {
-  name: string;
-  address: string;
-  customerNumber: CustomerNumber;
-  monthHistoryId: MonthHistoryId;
-  supplyPointSpecificNumberId: SupplyPointSpecificNumberId;
-  contractDetailsId: ContactDetailId;
-  instrumentId: InstrumentId;
+  personalInfo:PersonalInfo,
+  contactInfo:ContactInfo
 }

@@ -18,7 +18,7 @@ export class Instrument extends AggregateRoot<IInstrumentDomain, InstrumentId> {
     return this.props.name
   }
 
-  public get number (): IInstrumentDomain['number'] {
-    return this.props.number
+  public get code (): IInstrumentDomain['code'] {
+    return this.props.code
   }
 }

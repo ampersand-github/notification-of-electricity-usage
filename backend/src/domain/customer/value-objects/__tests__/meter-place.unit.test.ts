@@ -1,5 +1,5 @@
 import { MeterPlace } from '../meter-place'
-import {IMeterPlaceDomain} from "../__interface__/meter-place-domain-interface";
+import { IMeterPlaceDomain } from '../__interface__/meter-place-domain-interface'
 
 describe('MeterPlace', () => {
   it('3桁はエラー', () => {

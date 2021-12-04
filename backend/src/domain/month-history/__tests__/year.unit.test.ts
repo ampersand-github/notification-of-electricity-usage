@@ -1,6 +1,5 @@
 import { Year } from '../year'
-import {IYearDomain} from "../__interface__/year-domain-interface";
-
+import { IYearDomain } from '../__interface__/year-domain-interface'
 
 describe('Year', () => {
   describe('validate', () => {

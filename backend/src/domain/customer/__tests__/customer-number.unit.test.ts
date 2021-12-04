@@ -1,8 +1,8 @@
 import { CustomerNumber } from '../customer-number'
 import { CustomerNumberId } from '../customer-number-id'
-import { MeterDate } from '../meter-date'
-import { MeterPlace } from '../meter-place'
-import { OthersNumber } from '../others-number'
+import { MeterDate } from '../value-objects/meter-date'
+import { MeterPlace } from '../value-objects/meter-place'
+import { OthersNumber } from '../value-objects/others-number'
 import { ICustomerNumberDomain } from '../__interface__/customer-number-domain-interface'
 
 describe('CustomerNumber', () => {

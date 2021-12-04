@@ -1,4 +1,4 @@
-import { ValueObject } from '../__shared__/value-object'
+import { ValueObject } from '../../__shared__/value-object'
 import { IMeterPlaceDomain } from './__interface__/meter-place-domain-interface'
 
 export class MeterPlace extends ValueObject<IMeterPlaceDomain> {

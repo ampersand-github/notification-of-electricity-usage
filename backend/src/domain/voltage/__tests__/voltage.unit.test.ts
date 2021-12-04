@@ -3,8 +3,8 @@ import { VoltageId } from '../voltage-id'
 import { IVoltageDomain } from '../__interface__/voltage-domain-interface'
 
 const voltageProps: IVoltageDomain = {
-  code:0,
-  name: "低圧"
+  code: 0,
+  name: '低圧'
 }
 
 describe('Voltage', () => {
@@ -21,7 +21,7 @@ describe('Voltage', () => {
     )
     expect(
       Voltage.restore(voltageProps, voltageId).id.equals(
-          voltageId
+        voltageId
       )
     ).toBe(true)
   })
