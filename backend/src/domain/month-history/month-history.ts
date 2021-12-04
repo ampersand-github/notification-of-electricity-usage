@@ -57,6 +57,8 @@ export class MonthHistory extends AggregateRoot<
   public get meterReaderId (): IMonthHistoryDomain['meterReaderId'] {
     return this.props.meterReaderId
   }
+  // todo 当時の個人情報
+  // todo 当時の契約情報
 
   private static validate (props: IMonthHistoryDomain) {
     if (props.year.year !== props.readingDate.readingYear) {
